@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenzo Prouvèze | Le Profil Hybride Comptabilité & Tech</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .bg-corporate { background-color: #0f172a; }
+        .text-accent { color: #38bdf8; }
+        /* Smooth transition for text changes */
+        .fade-in { animation: fadeIn 0.3s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- NAVIGATION -->
+    <nav class="bg-white shadow-sm fixed w-full z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="font-bold text-xl text-slate-800">Kenzo<span class="text-blue-600">.Tech</span></div>
+                
+                <!-- Desktop Menu -->
+                <div class="flex items-center space-x-8">
+                    <div class="hidden md:flex space-x-8">
+                        <a href="#about" class="text-slate-600 hover:text-blue-600 transition" data-i18n="nav_profile">Mon Profil</a>
+                        <a href="#portfolio" class="text-slate-600 hover:text-blue-600 transition" data-i18n="nav_projects">Projets & Outils</a>
+                        <a href="#contact" class="hidden md:inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition" data-i18n="nav_contact">Me Contacter</a>
+                    </div>
+                    
+                    <!-- Language Toggle -->
+                    <div class="flex items-center border border-slate-300 rounded overflow-hidden text-sm font-bold">
+                        <button onclick="setLanguage('fr')" id="btn-fr" class="px-3 py-1 bg-slate-100 text-slate-800 hover:bg-slate-200 transition">FR</button>
+                        <button onclick="setLanguage('en')" id="btn-en" class="px-3 py-1 bg-white text-slate-400 hover:text-slate-800 hover:bg-slate-100 transition">EN</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="bg-corporate text-white pt-32 pb-20 px-4">
+        <div class="max-w-4xl mx-auto text-center fade-in">
+            <span class="inline-block py-1 px-3 rounded-full bg-blue-900 text-blue-200 text-sm font-semibold mb-4" data-i18n="hero_badge">
+                Recherche d'Alternance : BTS Comptabilité & Gestion
+            </span>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                <span data-i18n="hero_title_1">Ne saisissez plus vos données.</span><br>
+                <span class="text-accent" data-i18n="hero_title_2">Automatisez-les.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-300 mb-8 max-w-2xl mx-auto" data-i18n="hero_subtitle">
+                Je ne suis pas qu'un apprenti comptable. Je suis un ancien développeur qui met la logique du code au service de votre direction financière.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#portfolio" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-lg transition flex items-center justify-center gap-2">
+                    <i class="fas fa-laptop-code"></i> <span data-i18n="hero_btn_primary">Voir mes outils</span>
+                </a>
+                <a href="#contact" class="bg-transparent border border-slate-500 hover:border-white text-white font-semibold py-3 px-8 rounded-lg transition">
+                    <span data-i18n="hero_btn_secondary">Télécharger mon CV</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- VALUE PROPOSITION -->
+    <section id="about" class="py-20 px-4 fade-in">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4" data-i18n="about_title">Pourquoi un profil "Tech-Comptable" ?</h2>
+                <p class="text-slate-600 max-w-2xl mx-auto" data-i18n="about_subtitle">
+                    Le métier change. La saisie disparaît. L'analyse et la data prédominent. Voici ce que j'apporte à votre cabinet ou entreprise.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6 text-xl">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" data-i18n="card1_title">Automatisation & VBA</h3>
+                    <p class="text-slate-600 text-sm" data-i18n="card1_desc">
+                        Je sais programmer des macros Excel et utiliser Python pour nettoyer des fichiers bancaires complexes en quelques secondes.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-green-100 text-green-600 rounded-lg flex items-center justify-center mb-6 text-xl">
+                        <i class="fas fa-boxes-stacked"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" data-i18n="card2_title">Réalité Terrain</h3>
+                    <p class="text-slate-600 text-sm" data-i18n="card2_desc">
+                        Mon expérience logistique (Scapartois) me permet de comprendre les flux physiques derrière les factures. Je parle le langage de l'entrepôt.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center mb-6 text-xl">
+                        <i class="fas fa-earth-americas"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" data-i18n="card3_title">Vision Internationale</h3>
+                    <p class="text-slate-600 text-sm" data-i18n="card3_desc">
+                        Bilingue anglais (C1) et culture japonaise. Je peux gérer le reporting pour une maison mère étrangère sans barrière de langue.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO SECTION -->
+    <section id="portfolio" class="py-20 px-4 bg-slate-100 fade-in">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-3xl font-bold text-slate-900 mb-2" data-i18n="portfolio_title">Mon Portfolio Technique</h2>
+                    <p class="text-slate-600" data-i18n="portfolio_subtitle">Des exemples concrets de ce que je peux construire pour vous.</p>
+                </div>
+                <div class="mt-4 md:mt-0">
+                    <a href="https://github.com/Akakira21" target="_blank" class="text-blue-600 font-semibold hover:text-blue-800 text-sm">
+                        <span data-i18n="portfolio_github">Voir mon GitHub</span> <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Project 1: MarmiTwo -->
+                <div class="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
+                    <div class="h-48 bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center relative">
+                        <i class="fas fa-utensils text-5xl text-white"></i>
+                        <span class="absolute bottom-4 right-4 bg-white px-2 py-1 text-xs font-bold rounded text-slate-700">React / TypeScript / Supabase</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg mb-2" data-i18n="proj1_title">MarmiTwo - Application de Recettes IA</h3>
+                        <p class="text-slate-600 text-sm mb-4" data-i18n="proj1_desc">
+                            Application web complète avec base de données PostgreSQL, authentification, et génération de recettes par IA. Déployée en production avec +100 recettes.
+                        </p>
+                        <div class="flex gap-4">
+                            <a href="https://marmitwo.prouveze.fr" target="_blank" class="inline-flex items-center text-blue-600 font-semibold text-sm hover:underline">
+                                <i class="fas fa-external-link-alt mr-2"></i> <span data-i18n="proj_live">Voir le site</span>
+                            </a>
+                            <a href="https://github.com/Akakira21/MarmiTwo" target="_blank" class="inline-flex items-center text-slate-600 font-semibold text-sm hover:underline">
+                                <i class="fab fa-github mr-2"></i> <span data-i18n="proj_code">Code source</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Pre-Coder -->
+                <div class="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
+                    <div class="h-48 bg-gradient-to-br from-green-400 to-emerald-600 flex items-center justify-center relative">
+                        <i class="fas fa-file-invoice-dollar text-5xl text-white"></i>
+                        <span class="absolute bottom-4 right-4 bg-white px-2 py-1 text-xs font-bold rounded text-slate-700">Google Apps Script</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg mb-2" data-i18n="proj2_title">Pré-Coder Comptable</h3>
+                        <p class="text-slate-600 text-sm mb-4" data-i18n="proj2_desc">
+                            Outil d'automatisation qui pré-affecte les codes comptables (PCG) aux transactions bancaires. Réduit le temps de saisie de 70%.
+                        </p>
+                        <a href="#" class="inline-flex items-center text-blue-600 font-semibold text-sm hover:underline">
+                            <i class="fas fa-play-circle mr-2"></i> <span data-i18n="proj_demo">Voir la démo (2min)</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3: Cenacle -->
+                <div class="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
+                    <div class="h-48 bg-gradient-to-br from-blue-400 to-indigo-600 flex items-center justify-center relative">
+                        <i class="fas fa-calendar-alt text-5xl text-white"></i>
+                        <span class="absolute bottom-4 right-4 bg-white px-2 py-1 text-xs font-bold rounded text-slate-700">React / JavaScript</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg mb-2" data-i18n="proj3_title">Système de Réservation - Cénacle d'Arras</h3>
+                        <p class="text-slate-600 text-sm mb-4" data-i18n="proj3_desc">
+                            Application de réservation de salles avec calendrier interactif. Projet réel développé en stage pour un centre de conférences.
+                        </p>
+                        <span class="inline-flex items-center text-green-600 font-semibold text-sm">
+                            <i class="fas fa-check-circle mr-2"></i> <span data-i18n="proj_prod">En production</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Project 4: Portfolio -->
+                <div class="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
+                    <div class="h-48 bg-gradient-to-br from-purple-400 to-pink-600 flex items-center justify-center relative">
+                        <i class="fas fa-laptop-code text-5xl text-white"></i>
+                        <span class="absolute bottom-4 right-4 bg-white px-2 py-1 text-xs font-bold rounded text-slate-700">HTML / Tailwind / JS</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg mb-2" data-i18n="proj4_title">Ce Portfolio</h3>
+                        <p class="text-slate-600 text-sm mb-4" data-i18n="proj4_desc">
+                            Site web responsive avec mode sombre et support multilingue (FR/EN). Design moderne et optimisé pour le recrutement.
+                        </p>
+                        <span class="inline-flex items-center text-slate-600 font-semibold text-sm">
+                            <i class="fas fa-code mr-2"></i> <span data-i18n="proj_tech">Vous êtes dessus !</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="bg-corporate text-white py-16 px-4 fade-in">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6" data-i18n="footer_title">Prêt à moderniser votre comptabilité ?</h2>
+            <p class="text-slate-400 mb-8" data-i18n="footer_subtitle">
+                Je suis actuellement disponible pour une alternance (Rythme : 3 jours entreprise / 2 jours école).
+                Basé à Arras, mobile sur les Hauts-de-France.
+            </p>
+            
+            <div class="flex flex-col md:flex-row justify-center items-center gap-6 mb-12">
+                <a href="mailto:kenzo@prouveze.fr" class="flex items-center gap-3 text-xl font-semibold hover:text-blue-400 transition">
+                    <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-sm"><i class="fas fa-envelope"></i></div>
+                    kenzo@prouveze.fr
+                </a>
+                <a href="tel:0662983477" class="flex items-center gap-3 text-xl font-semibold hover:text-blue-400 transition">
+                    <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-sm"><i class="fas fa-phone"></i></div>
+                    06 62 98 34 77
+                </a>
+            </div>
+
+            <div class="border-t border-slate-800 pt-8 text-slate-500 text-sm">
+                &copy; 2025 Kenzo Prouvèze.
+            </div>
+        </div>
+    </footer>
+
+    <!-- TRANSLATION SCRIPT -->
+    <script>
+        const translations = {
+            fr: {
+                nav_profile: "Mon Profil",
+                nav_projects: "Projets & Outils",
+                nav_contact: "Me Contacter",
+                hero_badge: "Recherche d'Alternance : BTS Comptabilité & Gestion",
+                hero_title_1: "Ne saisissez plus vos données.",
+                hero_title_2: "Automatisez-les.",
+                hero_subtitle: "Je ne suis pas qu'un apprenti comptable. Je suis un ancien développeur qui met la logique du code au service de votre direction financière.",
+                hero_btn_primary: "Voir mes outils",
+                hero_btn_secondary: "Télécharger mon CV",
+                about_title: "Pourquoi un profil \"Tech-Comptable\" ?",
+                about_subtitle: "Le métier change. La saisie disparaît. L'analyse et la data prédominent. Voici ce que j'apporte à votre cabinet ou entreprise.",
+                card1_title: "Automatisation & VBA",
+                card1_desc: "Je sais programmer des macros Excel et utiliser Python pour nettoyer des fichiers bancaires complexes en quelques secondes.",
+                card2_title: "Réalité Terrain",
+                card2_desc: "Mon expérience logistique (Scapartois) me permet de comprendre les flux physiques derrière les factures. Je parle le langage de l'entrepôt.",
+                card3_title: "Vision Internationale",
+                card3_desc: "Bilingue anglais (C1) et culture japonaise. Je peux gérer le reporting pour une maison mère étrangère sans barrière de langue.",
+                portfolio_title: "Mon Portfolio Technique",
+                portfolio_subtitle: "Des exemples concrets de ce que je peux construire pour vous.",
+                portfolio_github: "Voir mon GitHub",
+                proj1_title: "MarmiTwo - Application de Recettes IA",
+                proj1_desc: "Application web complète avec base de données PostgreSQL, authentification, et génération de recettes par IA. Déployée en production avec +100 recettes.",
+                proj2_title: "Pré-Coder Comptable",
+                proj2_desc: "Outil d'automatisation qui pré-affecte les codes comptables (PCG) aux transactions bancaires. Réduit le temps de saisie de 70%.",
+                proj3_title: "Système de Réservation - Cénacle d'Arras",
+                proj3_desc: "Application de réservation de salles avec calendrier interactif. Projet réel développé en stage pour un centre de conférences.",
+                proj4_title: "Ce Portfolio",
+                proj4_desc: "Site web responsive avec mode sombre et support multilingue (FR/EN). Design moderne et optimisé pour le recrutement.",
+                proj_demo: "Voir la démo (2min)",
+                proj_live: "Voir le site",
+                proj_code: "Code source",
+                proj_prod: "En production",
+                proj_tech: "Vous êtes dessus !",
+                footer_title: "Prêt à moderniser votre comptabilité ?",
+                footer_subtitle: "Je suis actuellement disponible pour une alternance (Rythme : 3 jours entreprise / 2 jours école). Basé à Arras, mobile sur les Hauts-de-France."
+            },
+            en: {
+                nav_profile: "My Profile",
+                nav_projects: "Projects & Tools",
+                nav_contact: "Contact Me",
+                hero_badge: "Seeking Apprenticeship: Accounting & Management",
+                hero_title_1: "Stop just typing data.",
+                hero_title_2: "Automate it.",
+                hero_subtitle: "I am not just an accounting apprentice. I am a former developer applying code logic to your financial operations.",
+                hero_btn_primary: "See my tools",
+                hero_btn_secondary: "Download Resume",
+                about_title: "Why a \"Tech-Accountant\"?",
+                about_subtitle: "The industry is changing. Data entry is fading; analysis and automation are taking over. Here is the value I bring to your firm.",
+                card1_title: "Automation & VBA",
+                card1_desc: "I program Excel macros and use Python to clean complex banking files in seconds, saving hours of manual work.",
+                card2_title: "Operational Reality",
+                card2_desc: "My logistics experience (Scapartois) allows me to understand the physical flows behind the invoices. I speak the language of the warehouse.",
+                card3_title: "International Vision",
+                card3_desc: "Bilingual English (C1) with Japanese cultural background. I can handle reporting for international HQs with zero language barrier.",
+                portfolio_title: "Technical Portfolio",
+                portfolio_subtitle: "Concrete examples of what I can build for your finance team.",
+                portfolio_github: "View my GitHub",
+                proj1_title: "MarmiTwo - AI Recipe App",
+                proj1_desc: "Full-stack web app with PostgreSQL database, authentication, and AI-powered recipe generation. Deployed in production with 100+ recipes.",
+                proj2_title: "Accounting Pre-Coder",
+                proj2_desc: "Automation tool that pre-assigns accounting codes (PCG) to bank transactions. Reduces data entry time by 70%.",
+                proj3_title: "Booking System - Cénacle d'Arras",
+                proj3_desc: "Room reservation application with interactive calendar. Real project developed during internship for a conference center.",
+                proj4_title: "This Portfolio",
+                proj4_desc: "Responsive website with dark mode and multilingual support (FR/EN). Modern design optimized for recruitment.",
+                proj_demo: "Watch Demo (2min)",
+                proj_live: "View Site",
+                proj_code: "Source Code",
+                proj_prod: "In Production",
+                proj_tech: "You're on it!",
+                footer_title: "Ready to upgrade your accounting?",
+                footer_subtitle: "Currently available for an apprenticeship (3 days company / 2 days school). Based in Arras, mobile across Hauts-de-France."
+            }
+        };
+
+        function setLanguage(lang) {
+            // Update Text
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    el.textContent = translations[lang][key];
+                    // Re-trigger animation
+                    el.classList.remove('fade-in');
+                    void el.offsetWidth; // Trigger reflow
+                    el.classList.add('fade-in');
+                }
+            });
+
+            // Update Button Styles
+            if (lang === 'fr') {
+                document.getElementById('btn-fr').className = "px-3 py-1 bg-slate-100 text-slate-800 font-bold shadow-inner transition";
+                document.getElementById('btn-en').className = "px-3 py-1 bg-white text-slate-400 hover:text-slate-800 transition";
+                document.documentElement.lang = 'fr';
+            } else {
+                document.getElementById('btn-en').className = "px-3 py-1 bg-slate-100 text-slate-800 font-bold shadow-inner transition";
+                document.getElementById('btn-fr').className = "px-3 py-1 bg-white text-slate-400 hover:text-slate-800 transition";
+                document.documentElement.lang = 'en';
+            }
+        }
+    </script>
+</body>
+</html>
